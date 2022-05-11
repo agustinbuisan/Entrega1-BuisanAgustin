@@ -1,0 +1,42 @@
+{% extends "MiApp/father.html" %}
+
+{% load static %}
+
+
+{% block title %}
+
+<h1 class="mb-5">SUBJECT SEARCH!</h1>
+
+{% endblock %}
+
+
+{% block contentToChange %}
+
+{% if not error %}
+
+<h1> We are searching for teachers in the following subject: {{subject_name}}</h1>
+
+
+
+{% if teachers %}
+
+<ul>
+{% for subject in teachers %}
+    <li>{{subject.subject_name}}</li>
+
+    <br>
+
+{% endfor %}
+</ul>
+
+{% else %}
+<p>No subject was found in the database!</p>
+{% endif %}
+
+{% else %}
+
+<h1 style="color:red"> {{error}}</h1>
+
+{% endif %}
+
+{% endblock %}

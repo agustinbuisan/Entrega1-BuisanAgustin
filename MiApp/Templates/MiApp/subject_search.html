@@ -1,0 +1,22 @@
+{% extends "MiApp/father.html" %}
+
+{% load static %}
+
+
+{% block title %}
+
+<h1 class="mb-5">SUBJECT SEARCH!</h1>
+
+{% endblock %}
+
+
+{% block contentToChange %}
+
+<form action="{% url 'search' %}" method="GET">
+
+    <input type="string" placeholder="Input subject name..." name="subject_name" id="subject_name">
+    <input type="submit" value="Search">
+
+</form>
+
+{% endblock %}

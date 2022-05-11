@@ -22,8 +22,11 @@
         <!-- Navigation-->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
-                <a class="navbar-brand" href="#!">Start Bootstrap</a>
-                <a class="btn btn-primary" href="#signup">Sign Up</a>
+                <a class="navbar-brand" href="{% url 'inicio' %}"> Inicio </a>
+                <a class="btn btn-primary" href="{% url 'teachers_form' %}">Teachers</a>
+                <a class="btn btn-primary" href="{% url 'students_form' %}">Students</a>
+                <a class="btn btn-primary" href="{% url 'subjects_form' %}">Subjects</a>
+                <a class="btn btn-primary" href="{% url 'exams_form' %}">Exams</a>
             </div>
         </nav>
         <!-- Masthead-->
@@ -33,20 +36,23 @@
                     <div class="col-xl-6">
                         <div class="text-center text-white">
                             <!-- Page heading-->
-                            <h1 class="mb-5">Inicio!</h1>
-                            <!-- Signup form-->
-                            <!-- * * * * * * * * * * * * * * *-->
-                            <!-- * * SB Forms Contact Form * *-->
-                            <!-- * * * * * * * * * * * * * * *-->
-                            <!-- This form is pre-integrated with SB Forms.-->
-                            <!-- To make this form functional, sign up at-->
-                            <!-- https://startbootstrap.com/solution/contact-forms-->
-                            <!-- to get an API token!-->
+                            {% block title %}
+
+                            {% endblock %}
                         </div>
                     </div>
                 </div>
             </div>
         </header>
+
+        <section>
+            {% block contentToChange %}
+
+
+            {% endblock %}
+
+        </section>
+
         <!-- Footer-->
         <footer class="footer bg-light">
             <div class="container">
